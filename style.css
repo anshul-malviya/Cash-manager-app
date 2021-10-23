@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background:  #90A4AE;
+}
+.container{
+    margin-inline: auto;
+    width: min(60%, 60.5rem);
+    text-align: center;
+    background: #455A64;
+    color: white;
+    padding: .5rem;
+    margin: 1rem auto;
+    border: 2px solid lightgray;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+input{
+    padding: 0.5rem;
+}
+button{
+    padding: 0.1rem 0.4rem;
+    font-weight: bold;
+}
