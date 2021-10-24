@@ -1,11 +1,25 @@
 const billAmount = document.querySelector("#bill-amount");
 const cashGiven = document.querySelector("#cash-given");
-const message = document.querySelector("#message");
+const Hidden = document.querySelector("#hidden");
+const message = document.querySelector("#message")
+const messageCheck = document.querySelector("#message-check");
 const btnCheck = document.querySelector("#btn-check");
 const btnNext = document.querySelector("#btn-next");
 const noOfNotes = document.querySelectorAll(".no-of-notes");
 
-const availableNotes = [2000, 500, 100, 50, 20, 10, 5, 1]
+const availableNotes = [2000, 500, 100, 50, 20, 10, 5, 1];
+
+Hidden.style.display = "none";
+btnNext.addEventListener("click", function () {
+    message.style.display = "none";
+    btnNext.style.display = "none";
+    if (billAmount.value == "") {
+        showMessage("Insert Bill Amount")
+        btnNext.style.display = "block";
+    } else {
+        Hidden.style.display = "block";
+    }
+})
 
 btnCheck.addEventListener("click", function validate() {
     message.style.display = "none";
@@ -32,4 +46,5 @@ function calculateAmount(amounToBeReturn) {
 function showMessage(msg) {
     message.style.display = "block";
     message.innerText = msg;
+
 }
