@@ -28,3 +28,8 @@ button{
     padding: 0.1rem 0.4rem;
     font-weight: bold;
 }
+@media (max-width: 600px) {
+    .container{
+        width: 90%;
+    }
+}
