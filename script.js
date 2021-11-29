@@ -25,7 +25,7 @@ btnNext.addEventListener("click", function () {
 btnCheck.addEventListener("click", function validate() {
     message.style.display = "none";
     if (billAmount.value > 0) {
-        if (cashGiven.value >= billAmount.value) {
+        if (parseInt(cashGiven.value )>= parseInt(billAmount.value)) {
             const amounToBeReturn = cashGiven.value - billAmount.value;
             calculateAmount(amounToBeReturn);
         } else {
